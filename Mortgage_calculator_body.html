@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head> 
+    <meta charset="Latin 1">
     <title>Simulador de hipotecas</title>
     <link rel="stylesheet" href="Mortgage_calculator_styling.css">
 </head>
 <body>
     <h1>Simulador de hipotecas</h1>
-    <form>
+    <meta charset="Latin 1">
+    <form id="simulador_hipotecas">
         <label for="Precio_inmueble">Precio del inmueble</label>
-        <input type="Number" id="Precio_inmueble" name="Precio_inmueble" required>
+        <input type="Number" id="Precio_inmueble" name="Precio_inmueble" value="200000" required>
 
         <label for="Ahorro_aportado">Ahorro aportado</label>
-        <input type="number" id="Ahorro_aportado" name="Ahorro_aportado" required>
+        <input type="number" id="Ahorro_aportado" name="Ahorro_aportado" value="40000" required>
 
-        <label for="Plazo_años">Plazo en años</label>
-        <input type="number" id="Plazo_años" name="Plazo_años" required>
+            <label for="Plazo_años">Plazo en años</label>
+            <input type="range" id="Plazo_años" name="Plazo_años" min="1" max="40" step="1" value="30">
+        <div>
+            <span id="Years" style="">30</span> años 
+        </div>
 
-        <label for="tasa_interes">Tasa de interés</label>
-        <input type="number" id="tasa_interes" name="tasa_interes" required>
+
+        <label for="Tasa_interes">Tasa de interés</label>
+        <input type="number" id="Tasa_interes" name="Tasa_interes" value= "4.00" required>
 
         <button type="submit">Calcular Mensualidad</button>
     </form>
     <div id="result"></div>
-    <script>src="Mortgage_script.js"</script>
-
+    <script src="Mortgage_script.js"></script>
 </body>
-
 </html>
